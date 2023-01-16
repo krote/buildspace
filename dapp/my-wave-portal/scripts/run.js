@@ -18,6 +18,10 @@ const main = async () => {
 
     await waveContract.getTotalWaves();
 
+    const thirdWaveTxn = await waveContract.wave();
+    await thirdWaveTxn.wait();
+    await waveContract.getTotalWaves();
+
 };
 
 const runMain = async() => {
